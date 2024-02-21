@@ -1,0 +1,37 @@
+.btn {
+  &::first-letter {
+    @apply uppercase;
+  }
+  @apply rounded-full inline-block p-[.6em] px-[1.4em];
+  &--primary {
+    --color: theme(colors.cstm-coral-red);
+
+    @apply bg-[var(--color)] text-white;
+    &:hover {
+      outline: 2px solid var(--color);
+      outline-offset: 0.3em;
+    }
+  }
+
+  &--secondary {
+    @apply border-slate-500 border-[1px];
+
+    &:hover {
+      --color: black;
+      outline: 2px solid var(--color);
+      outline-offset: 0.3em;
+    }
+  }
+  &--full-width {
+    display: block;
+    width: 100%;
+  }
+  &--with-icon {
+    @apply inline-flex items-center justify-center gap-[.5em];
+
+    span.icon {
+      --size: 1em;
+      @apply h-[var(--size)] aspect-square rounded-full inline-grid place-items-center;
+    }
+  }
+}

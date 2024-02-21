@@ -1,0 +1,38 @@
+.width-container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+:root {
+  --p-x: clamp(1em, 4vw, 4em);
+  --p-y: 1.3em;
+}
+
+.padding-y-t {
+  padding-top: var(--p-y);
+}
+.padding-y-b {
+  padding-bottom: var(--p-y);
+}
+.padding-x-r {
+  padding-right: var(--p-x);
+}
+.padding-x-l {
+  padding-left: var(--p-x);
+}
+.padding-x {
+  padding-inline: var(--p-x);
+}
+
+.container {
+  @extend .width-container, .padding-x;
+}
+
+body {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  @apply text-cstm-slate-gray font-montserrat;
+  font-weight: 300;
+}
+
+section {
+  @apply py-[3em];
+}

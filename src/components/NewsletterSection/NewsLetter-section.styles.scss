@@ -1,0 +1,38 @@
+.label {
+  input:focus {
+    outline: 0;
+  }
+
+  --ring-color: rgb(123, 123, 218);
+  --ring-focus-color: rgb(114, 24, 224);
+  --ring-size: 1px;
+  @apply rounded-full   pr-[.5em] flex  flex-grow ring-1  ring-[var(--ring-color)];
+
+  input {
+    @apply flex-grow p-[1em] bg-transparent rounded-[inherit];
+  }
+
+  button {
+    @apply self-center flex-shrink-0;
+  }
+  &:has(input:focus) {
+    @apply ring-[var(--ring-focus-color)];
+  }
+
+  @media (max-width: 600px) {
+    &.label {
+      @apply flex-col gap-[1em] ring-transparent;
+
+      &:has(input:focus) {
+        @apply ring-transparent;
+      }
+
+      input {
+        @apply ring-1 ring-[var(--ring-color)]  focus:ring-[var(--ring-focus-color)];
+      }
+      button {
+        @apply w-full flex-grow;
+      }
+    }
+  }
+}
