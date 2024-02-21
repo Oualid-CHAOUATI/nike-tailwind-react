@@ -1,5 +1,5 @@
 import { star } from "../../assets/icons";
-import { customer1, customer2, offer } from "../../assets/images";
+import { customer1, customer2 } from "../../assets/images";
 import { SectionContent } from "../Section-content/Section-Content";
 import "./Testimonials-section.styles.scss";
 export const TestemonialsSection = () => {
@@ -47,7 +47,7 @@ const TestimonoalCard = (props: TTestimonoalCardProps) => {
       <img
         src={props.img}
         alt="user image"
-        className="h-[7em] rounded-full group-hover:ring group-hover:ring-8"
+        className="h-[7em] rounded-full  group-hover:ring-8"
       />
       <p className="max-w-[30ch]">{props.text}</p>
       <div className="flex gap-[.5em]">

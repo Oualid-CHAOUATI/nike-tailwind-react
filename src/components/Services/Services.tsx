@@ -1,7 +1,4 @@
-import { Button } from "../../UI/Button/Button";
 import { shieldTick, support, truckFast } from "../../assets/icons";
-import { shoe8 } from "../../assets/images";
-import { SectionContent } from "../Section-content/Section-Content";
 
 export const Services = () => {
   const servicesArray: TServiceCardProps[] = [

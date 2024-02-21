@@ -1,6 +1,6 @@
 import { Button } from "../../UI/Button/Button";
 import { ArrowRightCmp } from "../../assets/icons/arrow-right-cmp";
-import { offer, shoe8 } from "../../assets/images";
+import { offer } from "../../assets/images";
 import { SectionContent } from "../Section-content/Section-Content";
 
 export const SpecialOfferSection = () => {

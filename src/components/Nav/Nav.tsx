@@ -10,7 +10,7 @@ export const Nav = () => {
           <img src={headerLogo} alt="header-logo" />
         </a>
         <ul className="flex gap-[2em] max-md:hidden">
-          {anchors.split("*").map((anchor, index) => (
+          {anchors.split("*").map((anchor) => (
             <li key={anchor}>
               <a>{anchor}</a>
             </li>
