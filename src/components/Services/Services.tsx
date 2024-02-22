@@ -1,6 +1,7 @@
+import { ComponentProps } from "react";
 import { shieldTick, support, truckFast } from "../../assets/icons";
 
-export const Services = () => {
+export const Services = (props: ComponentProps<"section">) => {
   const servicesArray: TServiceCardProps[] = [
     {
       icon: truckFast,
@@ -20,7 +21,10 @@ export const Services = () => {
   ];
   return (
     <>
-      <section className="container flex justify-between gap-[2em] flex-wrap">
+      <section
+        id={props.id}
+        className="container flex justify-between gap-[2em] flex-wrap"
+      >
         {servicesArray.map((service) => (
           <ServiceCard
             icon={service.icon}

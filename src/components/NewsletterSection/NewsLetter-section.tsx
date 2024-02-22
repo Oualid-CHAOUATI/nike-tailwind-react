@@ -1,11 +1,15 @@
+import { ComponentProps } from "react";
 import { Button } from "../../UI/Button/Button";
 import { SectionTitle } from "../Section-content/Section-Content";
 
 import "./NewsLetter-section.styles.scss";
-export const NewsLetterSection = () => {
+export const NewsLetterSection = (props: ComponentProps<"section">) => {
   return (
     <>
-      <section className="container  flex flex-col xl:flex-row  lg:justify-between gap-[2em] items-center">
+      <section
+        id={props.id}
+        className="container  flex flex-col xl:flex-row  lg:justify-between gap-[2em] items-center"
+      >
         <SectionTitle className="lg:flex-shrink-0 max-lg:max-w-[100%]">
           Sign Up for <span className="text-cstm-coral-red">updates</span> &
           Newsletter

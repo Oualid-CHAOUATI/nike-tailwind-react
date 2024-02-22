@@ -1,12 +1,16 @@
+import { ComponentProps } from "react";
 import { Button } from "../../UI/Button/Button";
 import { ArrowRightCmp } from "../../assets/icons/arrow-right-cmp";
 import { offer } from "../../assets/images";
 import { SectionContent } from "../Section-content/Section-Content";
 
-export const SpecialOfferSection = () => {
+export const SpecialOfferSection = (props: ComponentProps<"section">) => {
   return (
     <>
-      <section className="container lg:flex lg:flex-row-reverse lg:justify-between lg:gap[1em] lg:items-center">
+      <section
+        id={props.id}
+        className="container lg:flex lg:flex-row-reverse lg:justify-between lg:gap[1em] lg:items-center"
+      >
         <SectionContent
           unlimitParagraph
           title={

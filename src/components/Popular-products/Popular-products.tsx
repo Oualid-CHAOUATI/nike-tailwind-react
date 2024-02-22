@@ -2,10 +2,12 @@ import { SectionContent } from "../Section-content/Section-Content";
 import { Button } from "../../UI/Button/Button";
 import { star } from "../../assets/icons";
 import { shoe4, shoe5, shoe6, shoe7 } from "../../assets/images";
+import { ComponentProps } from "react";
 
-export const PopularProducts = () => {
+import "./Popular-products.styles.scss";
+export const PopularProducts = (props: ComponentProps<"section">) => {
   return (
-    <section className="container">
+    <section className="container" id={props.id}>
       <SectionContent
         title={
           <>
@@ -24,7 +26,7 @@ export const PopularProducts = () => {
         button={<Button>Buy</Button>}
       />
 
-      <div className="flex flex-wrap justify-center lg:justify-between gap-[1.5em]">
+      <div className="flex flex-wrap justify-center lg:justify-between gap-2.5em" data-class="product-cards-wrapper">
         {products.map((product) => (
           <ProductCard
             img={product.img}
@@ -46,7 +48,7 @@ type TProductCardProps = {
 };
 const ProductCard = (props: TProductCardProps) => {
   return (
-    <div className="flex flex-col gap-[.3em]">
+    <div className="flex flex-col gap-[.3em]  " data-class="product-card">
       <div className="h-[15em] aspect-square">
         <img
           src={props.img}

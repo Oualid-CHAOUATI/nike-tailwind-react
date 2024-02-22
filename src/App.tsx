@@ -1,6 +1,6 @@
 import { Footer } from "./components/Footer/Footer";
 import { Hero } from "./components/Hero/Hero";
-import { Nav } from "./components/Nav/Nav";
+import { Nav, SECTIONS_ANCHORS } from "./components/Nav/Nav";
 import { NewsLetterSection } from "./components/NewsletterSection/NewsLetter-section";
 import { PopularProducts } from "./components/Popular-products/Popular-products";
 import { QualitySection } from "./components/Quality-section/Quality-section";
@@ -13,12 +13,18 @@ export default function App() {
     <>
       <Nav />
       <Hero />
-      <PopularProducts />
-      <QualitySection />
-      <Services />
-      <SpecialOfferSection />
-      <TestemonialsSection />
-      <NewsLetterSection />
+      <PopularProducts id={SECTIONS_ANCHORS.popular.link.replace("#", "")} />
+      <QualitySection id={SECTIONS_ANCHORS.quality.link.replace("#", "")} />
+      <Services id={SECTIONS_ANCHORS.services.link.replace("#", "")} />
+      <SpecialOfferSection
+        id={SECTIONS_ANCHORS.specialOffer.link.replace("#", "")}
+      />
+      <TestemonialsSection
+        id={SECTIONS_ANCHORS.testemonials.link.replace("#", "")}
+      />
+      <NewsLetterSection
+        id={SECTIONS_ANCHORS.newsletter.link.replace("#", "")}
+      />
       <Footer />
     </>
   );

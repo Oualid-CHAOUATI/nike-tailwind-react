@@ -1,0 +1,19 @@
+$size: 1320px;
+
+@media (max-width: #{$size}) {
+  #hamburger {
+    @apply block;
+  }
+
+  header {
+    @apply relative;
+  }
+  #nav-links-ul {
+    @apply absolute left-0 right-0 top-[100%]  flex-col items-center bg-white p-1em opacity-0 pointer-events-none;
+  }
+  #nav:has(#hamburger-input:checked) {
+    #nav-links-ul {
+      @apply pointer-events-auto opacity-100;
+    }
+  }
+}

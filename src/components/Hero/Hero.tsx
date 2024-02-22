@@ -37,7 +37,9 @@ const Left = () => {
       <p className="text-coral-red">Our Summer collections</p>
 
       <h1 className="text-[4em] font-bold text-black  leading-[1.4em]  alt-typeface">
-        <span className="bg-white ">The New Arrival</span>
+        <span className="bg-white rounded-full p-[.2em] pl-0 pr-[.3em]">
+          The New Arrival
+        </span>
         <br />
         <span className="text-cstm-coral-red">Nike</span> Shoes
       </h1>

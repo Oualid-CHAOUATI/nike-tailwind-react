@@ -1,0 +1,11 @@
+[data-class="product-cards-wrapper"] {
+  &:has([data-class="product-card"]:hover) {
+    [data-class="product-card"] {
+      @apply grayscale-[100%] hover:opacity-100 hover:grayscale-0;
+    }
+  }
+
+  [data-class="product-card"] {
+    @apply transition cursor-pointer;
+  }
+}

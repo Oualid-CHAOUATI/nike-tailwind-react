@@ -1,11 +1,15 @@
+import { ComponentProps } from "react";
 import { Button } from "../../UI/Button/Button";
 import { shoe8 } from "../../assets/images";
 import { SectionContent } from "../Section-content/Section-Content";
 
-export const QualitySection = () => {
+export const QualitySection = (props: ComponentProps<"section">) => {
   return (
     <>
-      <section className="container lg:flex lg:justify-between lg:gap[1em]">
+      <section
+        id={props.id}
+        className="container lg:flex lg:justify-between lg:gap[1em]"
+      >
         <SectionContent
           title={
             <>

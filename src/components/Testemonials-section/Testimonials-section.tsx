@@ -1,13 +1,15 @@
+import { ComponentProps } from "react";
 import { star } from "../../assets/icons";
 import { customer1, customer2 } from "../../assets/images";
 import { SectionContent } from "../Section-content/Section-Content";
 import "./Testimonials-section.styles.scss";
-export const TestemonialsSection = () => {
+export const TestemonialsSection = (props: ComponentProps<"section">) => {
   return (
     <>
       <section
-        id="testemonials-section"
+        id={props.id}
         className="text-center bg-cstm-pale-blue "
+        data-class="testemonial-section"
       >
         <div className="container">
           <SectionContent
